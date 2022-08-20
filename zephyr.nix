@@ -3,19 +3,19 @@
 pkgs.stdenv.mkDerivation rec {
   pname = "zephyr";
 
-  version = "0.4.0";
+  version = "0.5.2";
 
   src =
     if pkgs.stdenv.isDarwin then
       pkgs.fetchurl
         {
           url = "https://github.com/MaybeJustJames/zephyr/releases/download/v${version}/macOS.tar.gz";
-          sha256 = "1di4zk75pw0g2hk2zq61v7msvq2ibd9wxnk21nz26fxqw09gxacd";
+          sha256 = "06y82s2r5w8gryr6r2a4cwqwk01lrqgcv1x6qzxijh0ssfv42z1x";
         }
     else
       pkgs.fetchurl {
         url = "https://github.com/MaybeJustJames/zephyr/releases/download/v${version}/Linux.tar.gz";
-        sha256 = "002rlf9s81il5x3adv7qhj0wxbnvv348l5rcllkrbivk008bb83x";
+        sha256 = "15gfifqxxzr3slgk5a3bwjq5zfxm0gabknzqhl72x69rl959lwwh";
       };
 
   nativeBuildInputs = [ ]
